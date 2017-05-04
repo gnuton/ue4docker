@@ -6,6 +6,9 @@ RUN apt-get update -y
 
 RUN apt-get install -y --no-install-recommends mono-gmcs mono-xbuild mono-dmcs libmono-corlib4.0-cil libmono-system-data-datasetextensions4.0-cil libmono-system-web-extensions4.0-cil libmono-system-management4.0-cil libmono-system-xml-linq4.0-cil libmono-microsoft-build-tasks-v4.0-4.0-cil cmake dos2unix clang-3.3 libqt4-dev git build-essential ca-certificates pkg-config bash-completion
 
+ARG OAUTH_TOKEN
+ENV OAUTH_TOKEN=${OAUTH_TOKEN}
+RUN bash -c "echo -e Setting OAUTH_TOKEN to ${OAUTH_TOKEN}"
 COPY image/run.sh /
 RUN chmod a+x /run.sh
 CMD ["/run.sh"]
