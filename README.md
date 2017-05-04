@@ -1,30 +1,17 @@
-ue4docker
+gnuton/ue4 docker image
 =========
 
-Docker file for building ue4 on Linux
+Builds the latest unreal editor release for linux in a docker image.
 
 ## Instructions
 
-1. Get github OAUTH_TOKEN with at least repo access: https://help.github.com/articles/creating-an-access-token-for-command-line-use/
+1. Get github OAUTH_TOKEN in order to clone the Unreal4 git repository 
+  * log into https://github.com
+  * from top right menu > Settings > Personal Settings
+![oauth](https://raw.githubusercontent.com/gnuton/ue4docker/master/Oauth.png)
 
 2. Install docker: https://docs.docker.com/installation/
 
-3. In a terminal (bash):
-
-```
-$ git clone https://github.com/pjoe/ue4docker
-$ cd ue4docker
-$ export OAUTH_TOKEN=<my_token>
-$ docker build -t pjoe/ue4 .
-$ docker run -ti --rm -e OAUTH_TOKEN -v <host-ue4-dir>:/opt/ue4 -w /opt/ue4 pjoe/ue4
-
-# git clone https://$OAUTH_TOKEN@github.com/EpicGames/UnrealEngine -b release
-# cd UnrealEngine
-# ./Setup.sh
-# ./GenerateProjectFiles.sh
-# make ShaderCompileWorker UnrealLightmass UnrealPak UE4Editor
-# exit
-
-$ sudo chown -R <myuser>:<myuser> <host-ue4-dir>
-```
+3. In a terminal, please run  ./build.sh to build the docker image
+4. ...
 
