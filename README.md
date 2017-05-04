@@ -16,5 +16,9 @@ Builds the latest unreal editor release for linux in a docker image.
 ```bash
 export OAUTH_TOKEN=<MyToken> && ./createImage.sh to build the docker image
 ``` 
-4. Once the docker image is created, you can build UE4 by running ./build.sh
+4. Once the docker image is created, you can build UE4 by running 
+```bash
+./build.sh
+
+```
 
