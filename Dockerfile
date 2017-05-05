@@ -14,6 +14,9 @@ COPY image/run.sh /
 RUN chmod a+x /run.sh
 
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+RUN echo "docker ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/docker && \
+chmod 0440 /etc/sudoers.d/docker
 
 USER docker 
-CMD ["/run.sh"]
+#CMD ["/run.sh"]
+CMD ["bash"]
