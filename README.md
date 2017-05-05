@@ -12,6 +12,13 @@ Builds the latest unreal editor release for linux in a docker image.
 
 2. Install docker: https://docs.docker.com/installation/
 
-3. In a terminal, please run  ./build.sh to build the docker image
-4. ...
+3. In a terminal, please run  
+```bash
+export OAUTH_TOKEN=<MyToken> && ./createImage.sh to build the docker image
+``` 
+4. Once the docker image is created, you can build UE4 by running 
+```bash
+./build.sh
+
+```
 
