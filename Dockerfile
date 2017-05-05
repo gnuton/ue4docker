@@ -18,5 +18,4 @@ RUN echo "docker ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/docker && \
 chmod 0440 /etc/sudoers.d/docker
 
 USER docker 
-#CMD ["/run.sh"]
-CMD ["bash"]
+CMD ["/run.sh"]
