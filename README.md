@@ -2,6 +2,7 @@ gnuton/ue4 docker image
 =========
 
 Builds the latest unreal editor release for linux in a docker image.
+The binaries are than available in $HOME/ue4 dir.
 
 ## Instructions
 
