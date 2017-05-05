@@ -19,6 +19,9 @@ export OAUTH_TOKEN=<MyToken> && ./createImage.sh to build the docker image
 4. Once the docker image is created, you can build UE4 by running 
 ```bash
 ./build.sh
-
 ```
-
+5. Once the process is over you will run Unreal4 editor on linux
+```bash
+cd ~/ue4/UnrealEngine/Engine/Binaries/Linux
+./UE4Editor
+```
